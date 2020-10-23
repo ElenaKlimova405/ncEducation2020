@@ -1,7 +1,5 @@
 package com.nc.autumn2020.solutions.lesson3;
 
-import com.nc.autumn2020.lesson3.Human;
-
 public class Book {
 
     // обязательные поля
