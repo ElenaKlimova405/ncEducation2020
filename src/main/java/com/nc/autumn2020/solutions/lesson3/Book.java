@@ -3,16 +3,16 @@ package com.nc.autumn2020.solutions.lesson3;
 public class Book {
 
     // обязательные поля
-    String tittle;
-    String author;
-    int numberOfPages;
+    private String title;
+    private String author;
+    private int numberOfPages;
     // необязательные поля
-    int price;
-    int year;
-    String city;
+    private int price;
+    private int year;
+    private String city;
 
     private Book(Book.Builder builder) {
-        this.tittle = builder.tittle;
+        this.title = builder.title;
         this.author = builder.author;
         this.numberOfPages = builder.numberOfPages;
         this.price = builder.price;
@@ -20,8 +20,8 @@ public class Book {
         this.city = builder.city;
     }
 
-    public String getTittle() {
-        return tittle;
+    public String getTitle() {
+        return title;
     }
 
     public String getAuthor() {
@@ -44,8 +44,8 @@ public class Book {
         return city;
     }
 
-    public void setTittle(String tittle) {
-        this.tittle = tittle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public void setAuthor(String author) {
@@ -70,21 +70,21 @@ public class Book {
 
     public static class Builder {
         // обязательные поля
-        String tittle;
-        String author;
-        int numberOfPages;
+        private String title;
+        private String author;
+        private int numberOfPages;
         // необязательные поля
-        int price = 0;
-        int year = 0;
-        String city = "unknown";
+        private int price = 0;
+        private int year = 0;
+        private String city = "unknown";
 
         /**
-         * @param tittle
+         * @param title
          * @param  author
          * @param numberOfPages
          */
-        public Builder(String tittle, String author, int numberOfPages) {
-            this.tittle = tittle;
+        public Builder(String title, String author, int numberOfPages) {
+            this.title = title;
             this.author = author;
             this.numberOfPages = numberOfPages;
         }
@@ -112,7 +112,7 @@ public class Book {
     @Override
     public String toString() {
         return "Book{" +
-                "tittle='" + tittle + '\'' +
+                "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", numberOfPages=" + numberOfPages +
                 ", price=" + price +
