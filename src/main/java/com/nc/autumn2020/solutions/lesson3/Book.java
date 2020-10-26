@@ -1,7 +1,7 @@
 package com.nc.autumn2020.solutions.lesson3;
 
 public class Book {
-
+// все поля должны быть private
     // обязательные поля
     String tittle;
     String author;
@@ -69,6 +69,7 @@ public class Book {
     }
 
     public static class Builder {
+        //все поля должны быть private
         // обязательные поля
         String tittle;
         String author;
