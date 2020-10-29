@@ -1,6 +1,6 @@
 package com.nc.autumn2020.solutions.additional;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 import java.util.Base64;
 import java.io.*;
 
@@ -38,6 +38,9 @@ public class Decoder {
     public void decode() throws IOException {
         String outputFileName = "Климова Елена Вячеславовна.png";
         byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
-        FileUtils.writeByteArrayToFile(new File(outputFileName), decodedBytes);
+        //FileUtils.writeByteArrayToFile(new File(outputFileName), decodedBytes);
+        FileOutputStream fileOutputStream = new FileOutputStream(outputFileName);
+        fileOutputStream.write(decodedBytes);
+        fileOutputStream.close();
     }
 }
