@@ -1,6 +1,8 @@
 package com.nc.autumn2020.solutions.lesson5.task1.fruits;
 
-public abstract class Fruit {
+import com.nc.autumn2020.solutions.lesson5.task1.Eatable;
+
+public abstract class Fruit implements Eatable {
     private String name;
     private final int calories;
     private final int weight;
@@ -21,7 +23,7 @@ public abstract class Fruit {
     }
 
     protected void setName(String name) {
-        if (name.length() == 0)
+        if (name.length() == 0 || name == null)
             throw new IllegalArgumentException("Длина названия фрукта должно быть ненулевой!");
         this.name = String.valueOf(name);
     }
@@ -42,5 +44,10 @@ public abstract class Fruit {
     public String toString( ) {
         return "фрукт " + name +
                 " калорийностью " + calories;
+    }
+
+    @Override
+    public String eat() {
+        return "Скушал " + this;
     }
 }
