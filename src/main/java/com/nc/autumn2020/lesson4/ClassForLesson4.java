@@ -1,7 +1,5 @@
 package com.nc.autumn2020.lesson4;
 
-import com.nc.autumn2020.solutions.lesson3.Solution1;
-
 class Main {
     public static void main(String[] args) {
       Cut cut = new Cut(new Point(0,0), new Point(1,1));

@@ -1,9 +1,11 @@
 package com.nc.autumn2020.lesson5;
 
-public class Rectangle extends Figure implements Drawable{
+public class Rectangle extends Figure{
     private final int a, b;
 
     public Rectangle(int a, int b) {
+        if (a <= 0 || b <= 0)
+            throw new IllegalArgumentException("Стороны должны иметь положительные значения!");
         this.a = a;
         this.b = b;
     }

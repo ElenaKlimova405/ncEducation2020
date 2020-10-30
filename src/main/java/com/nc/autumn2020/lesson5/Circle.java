@@ -1,10 +1,12 @@
 package com.nc.autumn2020.lesson5;
 
-public class Circle extends Figure implements Drawable{
+public class Circle extends Figure{
 
     private final int r;
 
     public Circle(int r) {
+        if (r <= 0)
+            throw new IllegalArgumentException("Радиус должен иметь положительное значение!");
         this.r = r;
     }
 

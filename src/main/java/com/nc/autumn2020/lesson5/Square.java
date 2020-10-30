@@ -1,6 +1,6 @@
 package com.nc.autumn2020.lesson5;
 
-public class Square extends Rectangle implements Drawable{
+public class Square extends Rectangle{
     public Square(int a) {
         super(a, a);
     }

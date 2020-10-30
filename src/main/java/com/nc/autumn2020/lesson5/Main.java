@@ -19,5 +19,8 @@ public class Main {
 
         System.out.println("sumOfArea == " + sumOfArea);
         System.out.println("sumOfPerimeter == " + sumOfPerimeter);
+
+        //Rectangle rectangle = new Rectangle(-1, -2);
+        //Circle circle1 = new Circle(-3);
     }
 }
