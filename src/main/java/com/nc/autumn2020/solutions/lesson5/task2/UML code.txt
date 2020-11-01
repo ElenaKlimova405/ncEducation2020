@@ -1,0 +1,35 @@
+@startuml
+abstract class Container
+abstract class Fruit
+interface Eatable
+
+Container <|-- FruitBasket
+Container <|-- PlasticContainer
+
+Eatable <|-- Fruit
+Fruit <|-- Apple
+Fruit <|-- Mandarin
+Fruit <|-- Pear
+
+Container : private final int totalFruitWeight
+Container : private final int containerCapacity
+Container : private Fruit[] fruits
+Container : private int currentFruitWeight
+Container : private int currentFruitCount
+Container : public boolean putFruit(Fruit fruit)
+Container : public Fruit takeFruit()
+Container : public int getCurrentFruitWeight()
+Container : public int getCurrentFruitCount()
+
+Eatable : public String eat()
+
+Fruit : private String name
+Fruit : private final int calories
+Fruit : private final int weight
+Fruit : protected void setName(String name)
+Fruit : public String getName()
+Fruit : public int getCalories()
+Fruit : public int getWeight()
+Fruit : public String toString()
+Fruit : public String eat()
+@enduml

@@ -41,7 +41,7 @@ public abstract class Fruit implements Eatable {
     }
 
     @Override
-    public String toString( ) {
+    public String toString() {
         return "фрукт " + name +
                 " калорийностью " + calories;
     }
