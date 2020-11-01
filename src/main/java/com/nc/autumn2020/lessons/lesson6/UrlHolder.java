@@ -1,4 +1,4 @@
-package com.nc.autumn2020.lesson6;
+package com.nc.autumn2020.lessons.lesson6;
 
 public class UrlHolder {
     private String protocol;

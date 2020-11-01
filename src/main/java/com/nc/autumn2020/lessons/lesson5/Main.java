@@ -1,6 +1,4 @@
-package com.nc.autumn2020.lesson5;
-
-import java.util.concurrent.Callable;
+package com.nc.autumn2020.lessons.lesson5;
 
 public class Main {
     public static void main(String[] args){

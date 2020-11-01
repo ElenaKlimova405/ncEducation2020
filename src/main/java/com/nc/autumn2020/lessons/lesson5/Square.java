@@ -1,4 +1,4 @@
-package com.nc.autumn2020.lesson5;
+package com.nc.autumn2020.lessons.lesson5;
 
 public class Square extends Rectangle{
     public Square(int a) {

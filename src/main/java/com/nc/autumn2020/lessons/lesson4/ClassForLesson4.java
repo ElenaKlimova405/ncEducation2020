@@ -1,4 +1,4 @@
-package com.nc.autumn2020.lesson4;
+package com.nc.autumn2020.lessons.lesson4;
 
 class Main {
     public static void main(String[] args) {
