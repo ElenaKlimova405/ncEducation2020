@@ -1,5 +1,7 @@
 package com.nc.autumn2020.lesson6;
 
+import com.nc.autumn2020.LessonApi;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -7,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.StringJoiner;
 import java.util.StringTokenizer;
 
-public class StringLesson implements LessonApi{
+public class StringLesson implements LessonApi {
 
     public void method() {
 
