@@ -69,40 +69,40 @@ public class StringLesson implements LessonApi {
 
     }
 
+
     public void method2() {
-        String url = "http://localhost.netcracker.com:6810/somproduct.plain_taskc.nc?tab=_Task&object=9090363151013783084&container=9158610804913819337&task=9158610807913819337&state=update&return=%2Fcommon%2Fuobject.jsp%3Fobject%3D9158610804913819337&object=9090363151013783084";
-
-        //"UTF-8"
-
+        String url = "http://localhost.netcracker.com:6810/somproduct.plain_taskc.nc?" +
+                "tab=_Task&object=9090363151013783084" +
+                "&container=9158610804913819337" +
+                "&task=9158610807913819337" +
+                "&state=update&return=%2Fcommon%2Fuobject.jsp%3Fobject%3D9158610804913819337&object=9090363151013783084";
         try {
-            String decodedUrl1 = URLDecoder.decode(url, StandardCharsets.UTF_8.name());
-            System.out.println(decodedUrl1);
+            String decodedUrl = URLDecoder.decode(url, "UTF-8");
+            System.out.println(decodedUrl);
 
-            String encodeUrl = URLEncoder.encode(decodedUrl1, "ASCII");
-            System.out.println(encodeUrl);
+            String encodeUrlResult = URLEncoder.encode(decodedUrl,"ASCII");
+            System.out.println(encodeUrlResult);
+            String[] split = decodedUrl.split("\\?",2);
+            split[1] = URLEncoder.encode(split[1],"ASCII");
 
-
-
-            String[] strs = decodedUrl1.split("\\?", 2);
-            strs[1] = URLEncoder.encode(strs[1], "ASCII");
-            for (String s : strs) {
-                System.out.printf("result s = %s\n", s);
+            for (String s : split) {
+                System.out.printf("result s = %s\n",s);
             }
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
 
-
-
-
+        /*
         UrlHolder instance = new UrlHolderFactory().createInstance(url);
         KeyValueParameter[] keyValueParameters = instance.getKeyValueParameters();
-        for (KeyValueParameter keyValueParameter: keyValueParameters) {
-            String result1 = new StringBuilder().toString();//...
+        for (KeyValueParameter keyValueParameter : keyValueParameters) {
+
+            String result1 = new StringBuilder().append(keyValueParameter.getKey())
+                    .append("=")
+                    .append(keyValueParameter.getValue()).toString();
+
         }
-
-
-
+        */
     }
 
     @Override

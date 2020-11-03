@@ -2,15 +2,18 @@ package com.nc.autumn2020.lessons.lesson4;
 
 class Main {
     public static void main(String[] args) {
-      Cut cut = new Cut(new Point(0,0), new Point(1,1));
+      /*Cut cut = new Cut(new Point(0,0), new Point(1,1));
        System.out.println(cut.getName());
-
+        */
 
 
        /*  int[] a = {1,2,3};
         for (int b: a) {
             System.out.println(b);
         }*/
+
+        new Object();
+
     }
 }
 
@@ -116,6 +119,22 @@ class Point {
 
 
 class Human {
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
+
     // поля
    private int id;
    private char gender;
