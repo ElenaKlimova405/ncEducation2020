@@ -7,6 +7,7 @@ import com.nc.autumn2020.lessons.lesson8.ClassForLesson8;
 import com.nc.autumn2020.solutions.lesson5.task3.Solution5_3;
 import com.nc.autumn2020.solutions.lesson6.task1_url_holder.ClassForUrlHolder;
 import com.nc.autumn2020.solutions.lesson6.task2_plugin.DynamicClassLoaderExample;
+import com.nc.autumn2020.solutions.lesson8.Solution8;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -27,13 +28,13 @@ public class Main {
         lessonApi.executeSolution(args);*/
 
         // lesson 6 task 2 (plugin)
-        LessonApi lessonApi = new DynamicClassLoaderExample();
-        lessonApi.executeSolution(args);
+        /*LessonApi lessonApi = new DynamicClassLoaderExample();
+        lessonApi.executeSolution(args);*/
 
 
         // lesson 8
-       /* LessonApi lessonApi = new ClassForLesson8();
-        lessonApi.executeSolution(args);*/
+        LessonApi lessonApi = new Solution8();
+        lessonApi.executeSolution(args);
 
 
     }
