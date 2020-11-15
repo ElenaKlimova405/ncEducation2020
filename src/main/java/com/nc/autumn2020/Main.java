@@ -60,6 +60,7 @@ public class Main {
         lessonApi.executeSolution(args);
 */
 
+        // рефлексия
         LessonApi lessonApi = new Reflections();
         lessonApi.executeSolution(args);
 
