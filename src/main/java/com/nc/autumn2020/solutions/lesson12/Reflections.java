@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -45,7 +46,7 @@ public class Reflections implements LessonApi {
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
         try {
-            Class aClass = Class.forName("com.nc.autumn2020.lesson12."+name);
+            Class aClass = Class.forName("com.nc.autumn2020.solutions.lesson12."+name);
             Object animal = aClass.newInstance();
             voices.add(animal);
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
@@ -55,9 +56,17 @@ public class Reflections implements LessonApi {
 
     private void walk(List<Object> voices) {
         for (Object voice : voices) {
-            Class<?> aClass = voice.getClass();
+            //Class<?> aClass = voice.getClass();
+            Class<?> aClass = null;
+            try {
+                aClass = Class.forName("com.nc.autumn2020.solutions.lesson12.Zebra");
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+
             try {
                 Method makeVoice = aClass.getDeclaredMethod("makeVoice");
+
                 makeVoice.setAccessible(true);
                 makeVoice.invoke(voice);
                 makeVoice.setAccessible(false);
@@ -105,9 +114,15 @@ class Monkey implements Voice {
 }
 class Zebra implements Voice {
 
+    private Integer value1;
+    private static Integer inc = 0;
+    {
+        value1 = ++inc;
+    }
     @Override
     public void makeVoice() {
         System.out.println("gogogogo");
+        System.out.println(this.value1);
     }
 
 }

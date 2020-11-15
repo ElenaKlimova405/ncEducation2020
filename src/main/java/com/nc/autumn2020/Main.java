@@ -1,6 +1,7 @@
 package com.nc.autumn2020;
 
 import com.nc.autumn2020.solutions.lesson11.Solution11;
+import com.nc.autumn2020.solutions.lesson12.Reflections;
 import com.nc.autumn2020.solutions.lesson12.Solution12;
 
 import java.io.IOException;
@@ -55,7 +56,11 @@ public class Main {
         lessonApi.executeSolution(args);*/
 
         // solution 12
-        LessonApi lessonApi = new Solution12();
+       /* LessonApi lessonApi = new Solution12();
+        lessonApi.executeSolution(args);
+*/
+
+        LessonApi lessonApi = new Reflections();
         lessonApi.executeSolution(args);
 
 
