@@ -1,16 +1,10 @@
 package com.nc.autumn2020;
 
+import com.nc.autumn2020.solutions.lesson11.Solution11;
+
 import java.io.IOException;
 
-import com.nc.autumn2020.lessons.lesson10.GenericClass;
-import com.nc.autumn2020.lessons.lesson11.Solution11;
-import com.nc.autumn2020.lessons.lesson6.StringLesson;
-import com.nc.autumn2020.lessons.lesson8.ClassForLesson8;
-import com.nc.autumn2020.lessons.lesson9.IOSoluttions;
-import com.nc.autumn2020.solutions.lesson5.task3.Solution5_3;
-import com.nc.autumn2020.solutions.lesson6.task1_url_holder.ClassForUrlHolder;
-import com.nc.autumn2020.solutions.lesson6.task2_plugin.DynamicClassLoaderExample;
-import com.nc.autumn2020.solutions.lesson8.Solution8;
+
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -51,6 +45,11 @@ public class Main {
 
 
         // lesson 11
+        /*LessonApi lessonApi = new Solution11();
+        lessonApi.executeSolution(args);*/
+
+
+        // solution 11
         LessonApi lessonApi = new Solution11();
         lessonApi.executeSolution(args);
 
