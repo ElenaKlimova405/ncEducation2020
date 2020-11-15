@@ -3,7 +3,7 @@ package com.nc.autumn2020.solutions.lesson12;
 public class CustomObject {
     private Integer value = 2;
 
-    public CustomObject(Integer value) {
+    private CustomObject(Integer value) {
         this.value = value;
     }
 

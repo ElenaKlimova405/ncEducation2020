@@ -3,7 +3,9 @@ package com.nc.autumn2020.solutions.lesson12;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
 
 public class DataBaseFactory {
@@ -61,11 +63,13 @@ public class DataBaseFactory {
                             String property = PROPERTIES.getProperty(parsedValue);
                             try {
                                 Class customObjectClass = Class.forName(property);
-                                Object customObject = customObjectClass.newInstance();
-
+                                Constructor customObjectClassConstructor = customObjectClass.getDeclaredConstructor(Integer.class);
+                                customObjectClassConstructor.setAccessible(true);
+                                Object customObject = customObjectClassConstructor.newInstance(3);
+                                customObjectClassConstructor.setAccessible(false);
                                 declaredField.set(dataBase,customObject);
                                 declaredField.setAccessible(false);
-                            } catch (IllegalAccessException | ClassNotFoundException | InstantiationException e) {
+                            } catch (IllegalAccessException | ClassNotFoundException | InstantiationException | NoSuchMethodException | InvocationTargetException e) {
                                 e.printStackTrace();
                             }
                             System.out.println(parsedValue+"="+property);

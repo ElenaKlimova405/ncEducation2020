@@ -27,6 +27,10 @@ class DataBase {
         return dataBaseName;
     }
 
+    public CustomObject getCustomObject() {
+        return customObject;
+    }
+
     @Override
     public String toString() {
         return "DataBase{" +
