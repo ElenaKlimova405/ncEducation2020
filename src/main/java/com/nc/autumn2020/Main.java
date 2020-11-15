@@ -2,6 +2,8 @@ package com.nc.autumn2020;
 
 import java.io.IOException;
 
+import com.nc.autumn2020.lessons.lesson10.GenericClass;
+import com.nc.autumn2020.lessons.lesson11.Solution11;
 import com.nc.autumn2020.lessons.lesson6.StringLesson;
 import com.nc.autumn2020.lessons.lesson8.ClassForLesson8;
 import com.nc.autumn2020.lessons.lesson9.IOSoluttions;
@@ -39,7 +41,19 @@ public class Main {
         */
 
         // lesson 9
-        LessonApi lessonApi = new IOSoluttions();
+       /* LessonApi lessonApi = new IOSoluttions();
+        lessonApi.executeSolution(args);*/
+
+
+        // lesson 10
+        /*LessonApi lessonApi = new GenericClass();
+        lessonApi.executeSolution(args);*/
+
+
+        // lesson 11
+        LessonApi lessonApi = new Solution11();
         lessonApi.executeSolution(args);
+
+
     }
 }

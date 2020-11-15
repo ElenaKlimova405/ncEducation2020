@@ -3,7 +3,7 @@ package com.nc.autumn2020.solutions.lesson8;
 import java.util.Arrays;
 import java.util.Random;
 
-public class RandomProvider {
+public class RandomProvider implements AutoCloseable{
     private int[] randomNumbers;
     private int i;
 
@@ -49,6 +49,11 @@ public class RandomProvider {
         return "RandomProvider{" +
                 "randomNumbers=" + Arrays.toString(randomNumbers) +
                 '}';
+    }
+
+    @Override
+    public void close() throws Exception {
+        this.clear();
     }
 }
 
