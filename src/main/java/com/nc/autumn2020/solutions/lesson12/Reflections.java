@@ -56,13 +56,13 @@ public class Reflections implements LessonApi {
 
     private void walk(List<Object> voices) {
         for (Object voice : voices) {
-            //Class<?> aClass = voice.getClass();
-            Class<?> aClass = null;
+            Class<?> aClass = voice.getClass();
+            /*Class<?> aClass = null;
             try {
                 aClass = Class.forName("com.nc.autumn2020.solutions.lesson12.Zebra");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
-            }
+            }*/
 
             try {
                 Method makeVoice = aClass.getDeclaredMethod("makeVoice");
@@ -114,15 +114,16 @@ class Monkey implements Voice {
 }
 class Zebra implements Voice {
 
-    private Integer value1;
-    private static Integer inc = 0;
+    private Integer value1 = 2;
+    private int value2 = 3;
+    /*private static Integer inc = 0;
     {
         value1 = ++inc;
-    }
+    }*/
     @Override
     public void makeVoice() {
         System.out.println("gogogogo");
-        System.out.println(this.value1);
+        System.out.println(this.value1 + " " + this.value2);
     }
 
 }
