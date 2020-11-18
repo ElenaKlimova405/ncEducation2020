@@ -24,7 +24,7 @@ public class Solution11 implements LessonApi {
                 break;
             }
 
-            System.out.println(day.citation);
+            System.out.println(day.getCitation());
         }
     }
 }

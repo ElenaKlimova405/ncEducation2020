@@ -20,8 +20,12 @@ public enum DaysOfTheWeek {
             "про прошлое не хотят даже вспоминать."),
     SUNDAY("Воскресенье - день с повышенным содержанием понедельника в крови.");
 
-    String citation;
+    private String citation;
     DaysOfTheWeek(String citation) {
         this.citation = citation;
+    }
+
+    public String getCitation() {
+        return citation;
     }
 }
