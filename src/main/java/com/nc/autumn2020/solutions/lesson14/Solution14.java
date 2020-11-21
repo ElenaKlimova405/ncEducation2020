@@ -3,7 +3,7 @@ package com.nc.autumn2020.solutions.lesson14;
 import com.nc.autumn2020.LessonApi;
 
 import java.util.Arrays;
-import java.util.Optional;
+
 
 public class Solution14 implements LessonApi {
     @Override
@@ -21,7 +21,6 @@ public class Solution14 implements LessonApi {
                 .reduce((a, b) -> (a + b))
                 .orElse(0);
         System.out.println("Сумма равна " + sum);
-
 
     }
 }
