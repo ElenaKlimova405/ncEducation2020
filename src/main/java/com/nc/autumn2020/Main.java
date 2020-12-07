@@ -3,6 +3,7 @@ package com.nc.autumn2020;
 import com.nc.autumn2020.lessons.lesson13.LessonClass;
 import com.nc.autumn2020.lessons.lesson14.ClassForLesson14;
 import com.nc.autumn2020.lessons.lesson17.Lesson17;
+import com.nc.autumn2020.lessons.lesson22.Solution22;
 import com.nc.autumn2020.solutions.lesson11.Solution11;
 import com.nc.autumn2020.solutions.lesson12.Reflections;
 import com.nc.autumn2020.solutions.lesson12.Solution12;
@@ -91,13 +92,20 @@ public class Main {
 
 
         // solution 16
-        LessonApi lessonApi = new Solution16();
+        /*LessonApi lessonApi = new Solution16();
         lessonApi.executeSolution(args);
-
+*/
 
         // lesson 17
       /*  LessonApi lessonApi = new Lesson17();
         lessonApi.executeSolution(args);
 */
+
+
+
+        //lesson 22
+        LessonApi lessonApi = new Solution22();
+        lessonApi.executeSolution(args);
+
     }
 }
