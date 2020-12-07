@@ -4,13 +4,13 @@
        xsi:schemaLocation=
                "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.nc.autumn2020.lessons.lesson22.AudioPlayer" name="A">
-        <constructor-arg ref="E" />
-    </bean>
+<!--    <bean class="com.nc.autumn2020.lessons.lesson22.Task1.AudioPlayer" name="A">-->
+<!--        <constructor-arg ref="E" />-->
+<!--    </bean>-->
 
-    <bean class="com.nc.autumn2020.lessons.lesson22.EuropaPlus" name="E"/>
+<!--    <bean class="com.nc.autumn2020.lessons.lesson22.Task1.EuropaPlus" name="E"/>-->
 
-    <bean class="com.nc.autumn2020.lessons.lesson22.LoveRadio" name="L"/>
+<!--    <bean class="com.nc.autumn2020.lessons.lesson22.Task1.LoveRadio" name="L"/>-->
 
 
 </beans>

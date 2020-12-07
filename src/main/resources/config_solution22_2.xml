@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+        <bean class="com.nc.autumn2020.lessons.lesson22.Task2.Field" name="F" scope="singleton" destroy-method="removeWorkers"/>
+
+        <bean class="com.nc.autumn2020.lessons.lesson22.Task2.Worker" name="W" scope="prototype">
+            <constructor-arg name="amountOfWorkUpperBound" value="20"/>
+        </bean>
+
+
+
+
+</beans>

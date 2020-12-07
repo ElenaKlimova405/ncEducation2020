@@ -1,5 +1,9 @@
-package com.nc.autumn2020.lessons.lesson22;
+package com.nc.autumn2020.lessons.lesson22.Task1;
 
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class AudioPlayer {
     private Radio currentRadio;
 

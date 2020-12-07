@@ -1,15 +1,7 @@
 package com.nc.autumn2020;
 
-import com.nc.autumn2020.lessons.lesson13.LessonClass;
-import com.nc.autumn2020.lessons.lesson14.ClassForLesson14;
-import com.nc.autumn2020.lessons.lesson17.Lesson17;
-import com.nc.autumn2020.lessons.lesson22.Solution22;
-import com.nc.autumn2020.solutions.lesson11.Solution11;
-import com.nc.autumn2020.solutions.lesson12.Reflections;
-import com.nc.autumn2020.solutions.lesson12.Solution12;
-import com.nc.autumn2020.solutions.lesson14.Solution14;
-import com.nc.autumn2020.solutions.lesson15.Solution15;
-import com.nc.autumn2020.solutions.lesson16.Solution16;
+import com.nc.autumn2020.lessons.lesson22.Task1.Solution22_1;
+import com.nc.autumn2020.lessons.lesson22.Task2.Solution22_2;
 
 import java.io.IOException;
 
@@ -103,9 +95,16 @@ public class Main {
 
 
 
-        //lesson 22
-        LessonApi lessonApi = new Solution22();
+        //lesson 22_1
+       /*LessonApi lessonApi = new Solution22_1();
+        lessonApi.executeSolution(args);*/
+
+
+        //lesson 22_2
+        LessonApi lessonApi = new Solution22_2();
         lessonApi.executeSolution(args);
+
+
 
     }
 }
