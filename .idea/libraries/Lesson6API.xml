@@ -2,8 +2,16 @@
   <library name="Lesson6API">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/Lesson6API.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/h2/src/java10/src" />
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/h2/src/java8/src" />
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/h2/src/java9/src" />
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/h2/src/main" />
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/h2/src/test" />
+      <root url="jar://$PROJECT_DIR$/../../Учебный центр NetCracker/Практика/h2-2019-10-14 (1).zip!/h2/src/tools" />
+    </SOURCES>
   </library>
 </component>
