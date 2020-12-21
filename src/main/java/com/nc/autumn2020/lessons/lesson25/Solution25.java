@@ -69,7 +69,6 @@ public class Solution25 implements LessonApi {
 
     }
 
-
     public void createTable(Connection connection, String tableName, String... params) {
         StringBuilder query = new StringBuilder("CREATE TABLE IF NOT EXISTS ");
         query.append(tableName);
@@ -83,15 +82,13 @@ public class Solution25 implements LessonApi {
 
         try (Statement statement = connection.createStatement();)
         {
-           int resultSet = statement.executeUpdate(query.toString());
+            int resultSet = statement.executeUpdate(query.toString());
 
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
-
-
 
     public void addValues(Connection connection) {
         Scanner scanner = new Scanner(System.in);
@@ -101,7 +98,6 @@ public class Solution25 implements LessonApi {
         System.out.println("Введите значение amount:");
         Integer amount;
         amount = scanner.nextInt();
-
 
         StringBuilder query = new StringBuilder("INSERT INTO SHOP(NAME, AMOUNT) VALUES ");
         query.append("(");
@@ -115,14 +111,11 @@ public class Solution25 implements LessonApi {
 
         try (Statement statement = connection.createStatement();)
         {
-            int resultSet = statement.executeUpdate(query.toString());
-
-
+            statement.executeUpdate(query.toString());
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
     }
-
 
     public void showAll(Connection connection) {
         try (Statement statement = connection.createStatement();)
